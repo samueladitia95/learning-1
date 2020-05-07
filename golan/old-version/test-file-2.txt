@@ -1,0 +1,4 @@
+Rp 390.000 dirinci:
+  100000-an = 3 lembar
+   50000-an = 1 lembar
+   20000-an = 2 lembar

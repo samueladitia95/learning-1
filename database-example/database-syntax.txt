@@ -1,0 +1,85 @@
+SELECT * FROM table;
+    Grab all the information from the table
+
+SELECT * FROM table WHERE condition
+    Grab information based on the conditon ex: WHERE major = "math"
+
+SELECT * FROM table WHERE column IN (value1, value2, ..., valueN)
+    Grab information based on whether or not value exists in column
+
+SELECT * FROM table ORDER BY column
+    Grab all the information from the table and order it by colomn
+
+SELECT * FROM table ORDER BY column DESC
+    Grab all the information from the table and order it by colomn descendingly
+
+SELECT * FROM table LIMIT N
+    Grab all the information from the table and limit the search result to N
+
+SELECT * FROM table WHERE column LIKE "%anything_"
+    to find entry containing the condition, % is a wildcard of any number of character,
+    _ is only for 1 character
+
+SELECT column1 FROM table1 UNION SELECT column2 FROM table2
+    combine the 2 result into 1 query,
+    must have the same number of column,
+    must have the same data type
+
+SELECT left_table.column1 , ..., left_table.coloumnN, ... , right_table.columnN
+FROM left_table
+JOIN right_table
+ON left_table.columnN = right_table.columnN
+    join the result of query into 1 row, table must have relation to each other (FOREIGN KEY)
+
+
+CREATE TABLE table (column1, column2, column3, ...., columnN)
+    Create table with its coloumns
+
+    column properties and constrains : 
+        1. PRIMARY KEY : the primary of the table, will be UNIQUE and NOT NULL
+        2. AUTOINCREMENT : will increment INTEGER automaticaly
+        3. NOT NULL : rows under this column must not be empty
+        4. UNIQUE : rows under this column must be unique/ not the same
+
+    data types : 
+        1. INTEGER : whole number
+        2. DECIMAL(M, N) : float number, M is the total digit, n is the digit after comma
+        3. REAL : float number
+        4. VARCHAR(N) : a collection of character, n is the max character
+        5. TEXT : strings
+
+FOREIGN KEY(column) REFERENCES table(column) ON DELETE SET NULL
+    create foreign key that references other table primary key
+
+ALTER TABLE table ADD FOREIGN KEY(column) REFERENCES table_target(column) ON DELETE SET NULL
+    change the propeties of one the column to become foreign key
+
+DROP TABLE table
+    delete entire table
+
+ALTER TABLE table RENAME TO new_table_name
+    change table name 
+
+INSERT INTO table SELECT * FROM table
+    copy the value of one table to another table
+
+INSERT INTO table(column1,...,columnN) VALUES (value1,..., valueN)
+    entry a data(row) into the table
+
+ALTER TABLE table ADD column
+    add a column to the table, must specify the column properties
+
+UPDATE table SET column = value WHERE column = value
+    change one of the entry row, SET is the new value and WHERE is the targer/condition
+
+SELECT COUNT(column), column FROM table GROUP BY column
+    count the total entry of column values, and group/seperate them 
+    it called aggregation
+
+DELETE FROM table WHERE column = value
+    delete one of the row according the the WHERE
+
+    SQL Function :
+        1. COUNT > total of row/entry
+        2. AVG > Avarage of all row
+        3. SUM > Total value of all row
