@@ -33,12 +33,10 @@ func inputInt(display string) int {
 func collatz(n int) int {
 	var step int
 	for {
-		if n == 1 {
-			fmt.Println("done")
-			break
-		}
-		
 		switch {
+		case n == 1:
+			fmt.Println("done")
+			return step
 		case n % 2 == 0:
 			fmt.Println(n)
 			n /= 2
@@ -49,7 +47,6 @@ func collatz(n int) int {
 			step ++
 		}
 	}
-	return step
 }
 
 func main() {
