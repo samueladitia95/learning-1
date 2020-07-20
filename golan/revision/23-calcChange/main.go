@@ -46,6 +46,25 @@ func calcChange(change float64) {
 	fmt.Printf("Dollars: %v\nQuarters: %v\nDimes: %v\nNickels: %v\nPennies: %v\n", dollars, quarters, dimes, nickels, pennies)
 }
 
+func calcChangeRev(change float64) {
+	dollars := int(math.Floor(change))
+	coins := int((change - math.Floor(change)) * 100)
+	var twenties, tens, fives, ones, quarters, dimes, nickels, pennies int
+	if dollars > 0 {
+		twenties = dollars / 20
+		tens = (dollars % 20) / 10
+        fives = (dollars % 10) / 5
+        ones = (dollars % 5)
+	}
+	if coins > 0 {
+		quarters = coins / 25
+        dimes = (coins % 25) / 10
+        nickels = (coins % 10) / 5
+        pennies = (coins % 5)
+	}
+	fmt.Printf("Twenties: %v\nTens: %v\nFives: %v\nOnes: %v\nQuarters: %v\nDimes: %v\nNickels: %v\nPennies: %v\n",twenties, tens, fives, ones, quarters, dimes, nickels, pennies)
+}
+
 func main() {
 	var cost float64
 	var paid float64
@@ -58,6 +77,6 @@ func main() {
 		}
 		break
 	}
-	calcChange(paid - cost)
+	calcChangeRev(paid - cost)
 	fmt.Printf("total change: $%.2f\n", paid - cost)
 }

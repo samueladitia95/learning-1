@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    <h1><b>Buat Account Baru!</b></h1>
+    <h3><b>Sign Up Form</b></h3>
+
+    <form action="./welcome.html" method="POST">
+        <div>
+            <label>First Name:</label>
+            <br>
+            <input type="text" name="firstName">
+        </div>
+        <br>
+        
+        <div>
+            <label>Last Name:</label>
+            <br>
+            <input type="text" name="lastName">
+        </div>
+        <br>
+
+        <div>
+            <label>Gender:</label>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="male">Male
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="female">Female
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="gender" value="other">Other
+            </label>
+        </div>
+        <br>
+
+        <div>
+            <label>Nationality:</label>
+            <select name="nationality">
+                <option value="indonesian">Indonesian</option>
+                <option value="Malaysian">Malaysian</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label>Language Spoken:</label>
+            <br>
+            <label>
+                <input type="checkbox" name="language" value="indonesian">Bahasa Indonesia
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="language" value="english">English
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="language" value="other">Other
+            </label>
+        </div>
+        <br>
+
+        <div>
+            <label>Bio:</label>
+            <br>
+            <textarea name="bio" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>

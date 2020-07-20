@@ -30,8 +30,7 @@ func reverseStr(str string) string {
 }
 
 func checkPalindrome (str string) bool {
-	revervedStr := reverseStr(str)
-	return str == revervedStr
+	return str == reverseStr(str)
 }
 
 func main() {
