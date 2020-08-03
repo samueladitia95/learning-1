@@ -1,0 +1,10 @@
+STORE "pi" with any number;
+STORE "radius" with any number;
+STORE "circumference" with any number;
+
+SET "pi" value to 3.14;
+SET "radius" value to USER INPUT;
+CALCULATE "pi" times "radius";
+SET "circumference" value to calculation result;
+
+DISPLAY "circumference";b

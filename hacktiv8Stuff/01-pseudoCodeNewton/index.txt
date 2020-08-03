@@ -1,0 +1,10 @@
+STORE "mass" with any number;
+STORE "acceleration" with any number;
+STORE "force" with any number;
+
+SET "mass" value to 600;
+SET "acceleration" value to 2;
+CALCULATE "mass" times "acceleration";
+SET "force" value to calculation result;
+
+DISPLAY "force";
