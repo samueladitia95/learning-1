@@ -7,4 +7,4 @@ SET "radius" value to USER INPUT;
 CALCULATE "pi" times "radius";
 SET "circumference" value to calculation result;
 
-DISPLAY "circumference";b
+DISPLAY "circumference";
