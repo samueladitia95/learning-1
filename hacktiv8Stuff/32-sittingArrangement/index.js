@@ -3,10 +3,11 @@ function sittingArrangement(person, column) {
         return "Invalid Number";
     } else {
         let result = [];
-        let counter = -1;
         let i = 0
+        let counter = -1;
+        
         while (!(i >= person.length && result[counter].length === column)) {
-            // calculate sub-array length and create new sub-array if sub-array length reach column
+            // calculate sub-array length and create new sub-array if sub-array length equal column
             if (i % column === 0) {
                 counter++;
                 result[counter] = [];
