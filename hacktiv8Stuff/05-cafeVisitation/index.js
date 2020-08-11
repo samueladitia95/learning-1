@@ -2,7 +2,7 @@ var name = "John";
 var age = 19;
 var money = 678900;
 
-if (!(name)) {
+if (!name) {
     console.log("Anda tidak boleh masuk!");
 } else if (age < 17) {
     console.log("Hanya boleh memesan juice");

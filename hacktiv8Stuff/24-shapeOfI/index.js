@@ -12,9 +12,9 @@ if (num < 4 || num > 10) {
         } else {
             for (let j = 0; j < num - 1; j++) {
                 if (num % 2 === 1) {
-                    printed += (j === ((num - 1) / 2)) ? "|" : " ";
+                    printed += j === (num - 1) / 2 ? "|" : " ";
                 } else {
-                    printed += (j === (num / 2) - 1) ? "||" : " ";
+                    printed += j === num / 2 - 1 ? "||" : " ";
                 }
             }
         }

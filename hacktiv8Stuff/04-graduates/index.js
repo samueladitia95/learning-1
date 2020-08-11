@@ -27,4 +27,6 @@ let score = 89;
 let absents = 2;
 let graduationStatus = graduate(name, score, absents);
 
-console.log(`${name} with a score of ${score} and total absents of ${absents} is declared: ${graduationStatus}`);
+console.log(
+    `${name} with a score of ${score} and total absents of ${absents} is declared: ${graduationStatus}`
+);

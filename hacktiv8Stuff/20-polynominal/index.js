@@ -4,7 +4,7 @@
 // console.log(polynominal('1')) // 1
 // console.log(polynominal('a'))  // a
 
-function polynominal (rumus) {
+function polynominal(rumus) {
     // split into array
     let split = [];
     let tempString = "";
@@ -16,7 +16,7 @@ function polynominal (rumus) {
             tempString = "";
         }
         if (i === rumus.length - 1) {
-            split.push(tempString)
+            split.push(tempString);
         }
     }
 
@@ -37,13 +37,13 @@ function polynominal (rumus) {
         }
         type[tempString] += tempNum;
     }
-    return type
+    return type;
 }
 
-console.log(polynominal('a+2ab+3b+4c+5bc+4ab')) // ['a', '2ab', '3b', '4c', '5bc']
-console.log(polynominal('a+2a+3a+4a+5a')) // ['a', '2a', '3a', '4a', '5a']
-console.log(polynominal('a+2ab+3b+4c+5bc')) // a+2ab+3b+5bc+4c
-console.log(polynominal('a+2a+3a+4a+5a')) // 15a
-console.log(polynominal('a+2a+3b+4a+5a+4')) // 4+12a+3b
-console.log(polynominal('1')) // 1
-console.log(polynominal('a'))  // a
+console.log(polynominal("a+2ab+3b+4c+5bc+4ab")); // ['a', '2ab', '3b', '4c', '5bc']
+console.log(polynominal("a+2a+3a+4a+5a")); // ['a', '2a', '3a', '4a', '5a']
+console.log(polynominal("a+2ab+3b+4c+5bc")); // a+2ab+3b+5bc+4c
+console.log(polynominal("a+2a+3a+4a+5a")); // 15a
+console.log(polynominal("a+2a+3b+4a+5a+4")); // 4+12a+3b
+console.log(polynominal("1")); // 1
+console.log(polynominal("a")); // a

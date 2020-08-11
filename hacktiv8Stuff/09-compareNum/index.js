@@ -6,5 +6,5 @@ if (num1 === num2) {
 } else if (num1 > num2) {
     console.log(false);
 } else {
-    console.log(true)
+    console.log(true);
 }

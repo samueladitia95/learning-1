@@ -1,10 +1,10 @@
 function changeVocals(str) {
     let vocal = "aiueoAIUEO";
     let afterVocal = "bjvfpBJVFP";
-    let output = ""
+    let output = "";
     for (let i = 0; i < str.length; i++) {
-        let flag = false
-        let index = 0
+        let flag = false;
+        let index = 0;
         for (let j = 0; j < vocal.length; j++) {
             if (str[i] === vocal[j]) {
                 flag = true;
@@ -12,40 +12,40 @@ function changeVocals(str) {
                 break;
             }
         }
-        output += (flag) ? afterVocal[index] : str[i];
+        output += flag ? afterVocal[index] : str[i];
     }
     return output;
 }
-  
+
 function reverseWord(str) {
-    let output = ""
+    let output = "";
     for (let i = 0; i < str.length; i++) {
         output = str[i] + output;
     }
-    return output
-  }
-  
+    return output;
+}
+
 function setLowerUpperCase(str) {
-    let lowerCase = "abcdefghijklmnopqrstuvwxyz"
-    let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    let output = ""
+    let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let output = "";
     for (let i = 0; i < str.length; i++) {
         for (let j = 0; j < lowerCase.length; j++) {
             if (str[i] === lowerCase[j]) {
                 output += upperCase[j];
                 break;
-            } else if (str[i] === upperCase[j]){
+            } else if (str[i] === upperCase[j]) {
                 output += lowerCase[j];
                 break;
             } else if (str[i] === " ") {
                 output += str[i];
-                break
+                break;
             }
         }
     }
     return output;
 }
-  
+
 function removeSpaces(str) {
     let output = "";
     for (let i = 0; i < str.length; i++) {
@@ -57,7 +57,7 @@ function removeSpaces(str) {
     }
     return output;
 }
-  
+
 function passwordGenerator(name) {
     if (name.length < 5) {
         return "Minimal karakter yang diinputkan adalah 5 karakter";
@@ -65,9 +65,8 @@ function passwordGenerator(name) {
         return removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))));
     }
 }
-  
-console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
-console.log(passwordGenerator('Dimitri Wahyudiputra')); // 'BRTVPJDVYHBwJRTJMJd'
-console.log(passwordGenerator('Alexei')); // 'JFXFLb'
-console.log(passwordGenerator('Alex')); // 'Minimal karakter yang diinputkan adalah 5 karakter'
 
+console.log(passwordGenerator("Sergei Dragunov")); // 'VPNVGBRdJFGRFs'
+console.log(passwordGenerator("Dimitri Wahyudiputra")); // 'BRTVPJDVYHBwJRTJMJd'
+console.log(passwordGenerator("Alexei")); // 'JFXFLb'
+console.log(passwordGenerator("Alex")); // 'Minimal karakter yang diinputkan adalah 5 karakter'

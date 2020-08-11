@@ -1,4 +1,4 @@
-let word = "xoxoxo"
+let word = "xoxoxo";
 let xCount = 0;
 let oCount = 0;
 

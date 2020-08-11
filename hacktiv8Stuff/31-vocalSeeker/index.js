@@ -1,5 +1,5 @@
 function vocalSeeker(board) {
-    let vocal = "aiueoAIUEO"
+    let vocal = "aiueoAIUEO";
     let vocalCount = 0;
     let vocalFound = "";
     for (let i = 0; i < board.length; i++) {
@@ -20,9 +20,9 @@ function vocalSeeker(board) {
 }
 
 let board = [
-    ['*', '*', '*', 10],
-    ['*', '*', -5, -10, '*', 100],
-    ['a', 'A', 'o', 'b']
-  ]
-  
-  console.log(vocalSeeker(board)); // vokal ditemukan 3 dan kumpulan vokal adalah aAo
+    ["*", "*", "*", 10],
+    ["*", "*", -5, -10, "*", 100],
+    ["a", "A", "o", "b"],
+];
+
+console.log(vocalSeeker(board)); // vokal ditemukan 3 dan kumpulan vokal adalah aAo

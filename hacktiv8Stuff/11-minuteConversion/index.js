@@ -4,4 +4,4 @@ while (timeInSecond >= 60) {
     timeInSecond -= 60;
     timeInMinute += 1;
 }
-console.log(`${timeInMinute}:${timeInSecond}`)
+console.log(`${timeInMinute}:${timeInSecond}`);

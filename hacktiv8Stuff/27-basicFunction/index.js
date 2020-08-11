@@ -3,7 +3,7 @@ function shoutOut() {
     console.log("Halo Function!");
 }
 
-shoutOut()
+shoutOut();
 
 // Function Multiply
 function calculateMultiply(num1, num2) {
@@ -17,7 +17,7 @@ console.log(hasilPerkalian);
 
 // Function Sentence
 function processSentence(name, age, address, hobby) {
-    return `Nama saya ${name}, umur saya ${age} tahun, alamat saya di ${address}, dan saya punya hobby yaitu ${hobby}!`
+    return `Nama saya ${name}, umur saya ${age} tahun, alamat saya di ${address}, dan saya punya hobby yaitu ${hobby}!`;
 }
 
 let name = "Agus";

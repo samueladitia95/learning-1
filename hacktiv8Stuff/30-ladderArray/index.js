@@ -10,4 +10,4 @@ function ladder(word) {
     return outerArray;
 }
 
-console.log(ladder('hacktiv8'));
+console.log(ladder("hacktiv8"));

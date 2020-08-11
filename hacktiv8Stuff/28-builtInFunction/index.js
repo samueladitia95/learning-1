@@ -32,7 +32,7 @@ function ganjilGenap(plat) {
     if (plat === "") {
         return "plat tidak ditemukan";
     } else if (!plat) {
-        return "invalid data"
+        return "invalid data";
     }
 
     let platArray = [];
@@ -43,7 +43,7 @@ function ganjilGenap(plat) {
         if (plat[i] === ";") {
             platArray.push(Number(platString));
             platString = "";
-            continue
+            continue;
         } else {
             platString += plat[i];
         }
@@ -54,21 +54,21 @@ function ganjilGenap(plat) {
     let odd = 0;
     let even = 0;
     for (let i = 0; i < platArray.length; i++) {
-        (platArray[i] % 2 === 0) ? even++ : odd++;
+        platArray[i] % 2 === 0 ? even++ : odd++;
     }
 
     // return result
     if (even === 0) {
-        return `plat ganjil sebanyak ${odd} dan plat genap tidak ditemukan`
+        return `plat ganjil sebanyak ${odd} dan plat genap tidak ditemukan`;
     } else if (odd === 0) {
-        return `plat genap sebanyak ${even} dan plat ganjil tidak ditemukan`
+        return `plat genap sebanyak ${even} dan plat ganjil tidak ditemukan`;
     } else {
-        return `plat genap sebanyak ${even} dan plat ganjil sebanyak ${odd}`
+        return `plat genap sebanyak ${even} dan plat ganjil sebanyak ${odd}`;
     }
 }
 
-console.log(ganjilGenap('2341;3429;864;1309;1276')) //plat genap sebanyak 2 dan plat ganjil sebanyak 3
-console.log(ganjilGenap('2347;3429;1305')) //plat ganjil sebanyak 3 dan plat genap tidak ditemukan
-console.log(ganjilGenap('864;1308;1276;1432')) //plat genap sebanyak 4 dan plat ganjil tidak ditemukan
-console.log(ganjilGenap('')) //plat tidak ditemukan
-console.log(ganjilGenap()) //invalid data
+console.log(ganjilGenap("2341;3429;864;1309;1276")); //plat genap sebanyak 2 dan plat ganjil sebanyak 3
+console.log(ganjilGenap("2347;3429;1305")); //plat ganjil sebanyak 3 dan plat genap tidak ditemukan
+console.log(ganjilGenap("864;1308;1276;1432")); //plat genap sebanyak 4 dan plat ganjil tidak ditemukan
+console.log(ganjilGenap("")); //plat tidak ditemukan
+console.log(ganjilGenap()); //invalid data

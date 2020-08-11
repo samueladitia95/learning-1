@@ -28,12 +28,12 @@ function targetTerdekat(arr) {
     } else {
         let distanceFoward = targetIndexFoward - startIndex;
         let distanceBackward = startIndex - targetIndexBackward;
-        return (distanceFoward > distanceBackward) ? distanceBackward : distanceFoward
+        return distanceFoward > distanceBackward ? distanceBackward : distanceFoward;
     }
 }
 
-console.log(targetTerdekat([' ', ' ', 'o', ' ', ' ', 'x', ' ', 'x'])); // 3
-console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x'])); // 4
-console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' '])); // 1
-console.log(targetTerdekat([' ', ' ', 'o', ' '])); // 0
-console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x'])); // 2
+console.log(targetTerdekat([" ", " ", "o", " ", " ", "x", " ", "x"])); // 3
+console.log(targetTerdekat(["o", " ", " ", " ", "x", "x", "x"])); // 4
+console.log(targetTerdekat(["x", " ", " ", " ", "x", "x", "o", " "])); // 1
+console.log(targetTerdekat([" ", " ", "o", " "])); // 0
+console.log(targetTerdekat([" ", "o", " ", "x", "x", " ", " ", "x"])); // 2

@@ -10,7 +10,7 @@ for (let i = kata.length - 1; i >= 0; i--) {
             if (i % 2 === 0) {
                 printed += kata[j];
             } else {
-                printedTemp = kata[j] + printedTemp
+                printedTemp = kata[j] + printedTemp;
             }
         }
     }
