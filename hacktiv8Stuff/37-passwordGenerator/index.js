@@ -1,4 +1,4 @@
-function changeVocals (str) {
+function changeVocals(str) {
     let vocal = "aiueoAIUEO";
     let afterVocal = "bjvfpBJVFP";
     let output = ""
@@ -17,7 +17,7 @@ function changeVocals (str) {
     return output;
 }
   
-function reverseWord (str) {
+function reverseWord(str) {
     let output = ""
     for (let i = 0; i < str.length; i++) {
         output = str[i] + output;
@@ -25,7 +25,7 @@ function reverseWord (str) {
     return output
   }
   
-function setLowerUpperCase (str) {
+function setLowerUpperCase(str) {
     let lowerCase = "abcdefghijklmnopqrstuvwxyz"
     let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let output = ""
@@ -46,7 +46,7 @@ function setLowerUpperCase (str) {
     return output;
 }
   
-function removeSpaces (str) {
+function removeSpaces(str) {
     let output = "";
     for (let i = 0; i < str.length; i++) {
         if (str[i] === " ") {
@@ -58,7 +58,7 @@ function removeSpaces (str) {
     return output;
 }
   
-function passwordGenerator (name) {
+function passwordGenerator(name) {
     if (name.length < 5) {
         return "Minimal karakter yang diinputkan adalah 5 karakter";
     } else {
