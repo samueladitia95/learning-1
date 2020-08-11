@@ -62,8 +62,7 @@ function passwordGenerator (name) {
     if (name.length < 5) {
         return "Minimal karakter yang diinputkan adalah 5 karakter";
     } else {
-        let output = removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))));
-        return output;
+        return removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))));
     }
 }
   
