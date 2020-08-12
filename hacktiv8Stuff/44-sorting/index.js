@@ -31,22 +31,26 @@ function sortingByType(array) {
 // // [ [ -45, 1, 3 ], [ 'array', 'big' ], [ false, true ] ]
 
 function sortAllClean(array) {
-    let output = [];
+    let output = [[], [], []];
+    
     for (let i = 0; i < array.length; i++) {
         if (!array[i] && array[i] !== false) {
             continue;
         }
 
         if (typeof array[i] === "number") {
-            output[1].push(array[i]);
+            output[0].push(array[i]);
+            output[0] = sorting(output[0]);
         } else if (typeof array[i] === "string") {
             output[1].push(array[i]);
         } else if (typeof array[i] === "boolean") {
             output[2].push(array[i]);
         }
-        output[0] = sorting(output[0]);
     }
 
+    if (!output[0][0] && !output[1][0] && !output[2][0]) {
+        output = [];
+    }
     return output;
 }
 
