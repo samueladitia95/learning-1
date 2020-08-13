@@ -4,17 +4,17 @@ function cariModus(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (!result[arr[i]]) {
             result[arr[i]] = 0;
-        } 
-        result[arr[i]]++
+        }
+        result[arr[i]]++;
 
         // check if all num the same
         if (arr[0] !== arr[i]) {
             isSame = true;
         }
     }
-    
+
     let highestCount = "";
-    let count = 0
+    let count = 0;
     for (item in result) {
         if (result[item] > count) {
             highestCount = item;

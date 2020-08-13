@@ -5,14 +5,14 @@ function participantsSummary(data) {
     let result = {};
     for (let i = 0; i < data.length; i++) {
         if (!(data[i][1] in result)) {
-            result[data[i][1]] = 0
+            result[data[i][1]] = 0;
         }
-        
+
         result[data[i][1]]++;
     }
     let resultString = "";
     for (item in result) {
-        resultString += `${result[item]}: ${item}\n`
+        resultString += `${result[item]}: ${item}\n`;
     }
     return resultString;
 }

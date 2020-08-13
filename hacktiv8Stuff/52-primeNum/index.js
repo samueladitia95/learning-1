@@ -1,7 +1,7 @@
 function angkaPrima(angka) {
     let isPrime = true;
     for (let i = 2; i < angka; i++) {
-        if (angka % i === 0 ) {
+        if (angka % i === 0) {
             isPrime = false;
             break;
         }

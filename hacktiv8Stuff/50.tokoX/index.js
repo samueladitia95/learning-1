@@ -26,7 +26,8 @@ function countProfit(shoppers) {
                 if (shoppers[i].amount <= result[j].leftOver) {
                     result[j].shoppers.push(shoppers[i].name);
                     result[j].leftOver -= shoppers[i].amount;
-                    result[j].totalProfit += shoppers[i].amount * listBarang[j][1];
+                    result[j].totalProfit +=
+                        shoppers[i].amount * listBarang[j][1];
                 }
             }
         }
@@ -56,7 +57,9 @@ console.log(
 //     shoppers: [ 'Rani' ],
 //     leftOver: 0,
 //     totalProfit: 175000 } ]
-console.log(countProfit([{ name: "Windi", product: "Sepatu Naiki", amount: 5 }]));
+console.log(
+    countProfit([{ name: "Windi", product: "Sepatu Naiki", amount: 5 }])
+);
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [],
 //     leftOver: 10,

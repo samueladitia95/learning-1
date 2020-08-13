@@ -16,12 +16,10 @@ function participantsSummary(data) {
         if (!isFound) {
             result[index][1]++;
         } else {
-            result.push([data[i][1], 1])
+            result.push([data[i][1], 1]);
         }
     }
     // return result;
-
-    
 }
 // Test cases
 console.log(

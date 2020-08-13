@@ -1,9 +1,9 @@
 function groupAnimals(animals) {
     let alphabeth = "abcdefghijklmnopqrstuvwxyz";
-    let result = []
+    let result = [];
     for (let i = 0; i < alphabeth.length; i++) {
-        let subResult = []
-        for(let j = 0; j < animals.length; j++) {
+        let subResult = [];
+        for (let j = 0; j < animals.length; j++) {
             if (alphabeth[i] === animals[j][0]) {
                 subResult.push(animals[j]);
             }
