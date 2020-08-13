@@ -37,7 +37,7 @@ function setLowerUpperCase(str) {
             } else if (str[i] === upperCase[j]) {
                 output += lowerCase[j];
                 break;
-            } else if (str[i] === " ") {
+            } else if (str[i] === " " || Number(str[i])) {
                 output += str[i];
                 break;
             }
@@ -59,7 +59,7 @@ function removeSpaces(str) {
 }
 
 function passwordGenerator(name) {
-    if (name.length < 5) {
+    if (name.length < 5 || Number(name)) {
         return "Minimal karakter yang diinputkan adalah 5 karakter";
     } else {
         return removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))));
