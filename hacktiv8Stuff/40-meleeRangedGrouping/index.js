@@ -1,57 +1,47 @@
-function splitting(str) {
-    // split str into array
-    let split = [];
-    let heroAndType = "";
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === ",") {
-            split.push(heroAndType);
-            heroAndType = "";
-        } else {
-            heroAndType += str[i];
-        }
-    }
-    split.push(heroAndType);
-
-    // split hero and type
-    let output = [];
-    for (let i = 0; i < split.length; i++) {
-        let hero = "";
-        let type = "";
-        let flag = false;
-        for (let j = 0; j < split[i].length; j++) {
-            if (split[i][j] === "-") {
-                flag = true;
-                continue;
-            }
-
-            flag ? (type += split[i][j]) : (hero += split[i][j]);
-        }
-        output.push([hero, type]);
-    }
-
-    return output;
-}
-
 function meleeRangedGrouping(str) {
-    let output = [[], []];
-    let splited = splitting(str);
+	// check if string is empty
+	if (!str.length) {
+		return [];
+	}
 
-    for (let i = 0; i < splited.length; i++) {
-        if (splited[i][1] === "Ranged") {
-            output[0].push(splited[i][0]);
-        } else {
-            output[1].push(splited[i][0]);
-        }
-    }
-    return output;
+	// split name and type into its own value
+	let seperated = [];
+	let splitted = splitting(str);
+
+	for (let i = 0; i < splitted.length; i++) {
+		let hero = "";
+		let type = "";
+		let flag = false;
+		splited;
+		for (let j = 0; j < splitted[i].length; j++) {
+			if (splitted[i][j] === "-") {
+				flag = true;
+				continue;
+			}
+
+			flag ? (type += splitted[i][j]) : (hero += splitted[i][j]);
+		}
+		seperated.push([hero, type]);
+	}
+
+	// group weapon name into it's own sub-array
+	let output = [[], []];
+	for (let i = 0; i < seperated.length; i++) {
+		if (seperated[i][1] === "Ranged") {
+			output[0].push(seperated[i][0]);
+		} else {
+			output[1].push(seperated[i][0]);
+		}
+	}
+	return output;
 }
 
-// TEST CASE
+// // TEST CASE
 
 console.log(meleeRangedGrouping("Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged"));
-// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
+// // [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
 
 console.log(meleeRangedGrouping("Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged"));
-// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
+// // [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
 
 console.log(meleeRangedGrouping("")); // []
