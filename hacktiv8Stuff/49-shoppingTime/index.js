@@ -20,7 +20,7 @@ function shoppingTime(memberId, money) {
         "Casing Handphone": 50000,
     };
 
-    for (item in harga) {
+    for (let item in harga) {
         if (harga[item] <= money) {
             money -= harga[item];
             result["changeMoney"] = money;
