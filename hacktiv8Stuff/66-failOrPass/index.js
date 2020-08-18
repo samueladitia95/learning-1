@@ -22,33 +22,33 @@ function passOrFail(arr) {
 	let result = [];
 
 	for (let i = 0; i < arr.length; i++) {
-        // Check classCode already in result
+		// Check classCode already in result
 		let isExist = false;
 		for (let j = 0; j < result.length; j++) {
 			if (result[j]["classCode"] === arr[i]["classCode"]) {
-                isExist = true;
-                break;
+				isExist = true;
+				break;
 			}
 		}
 
-        // if classCode not exist in result, add it
+		// if classCode not exist in result, add it
 		if (!isExist) {
 			result.push({
 				classCode: arr[i]["classCode"],
 				passed: [],
 				failed: [],
 			});
-        }
-        
-        // filter array of object based on score
+		}
+
+		// filter array of object based on score
 		for (let j = 0; j < result.length; j++) {
 			if (arr[i]["classCode"] === result[j]["classCode"]) {
 				if (arr[i]["score"] > 65) {
 					result[j]["passed"].push(arr[i]["name"]);
 				} else {
 					result[j]["failed"].push(arr[i]["name"]);
-                }
-                continue;
+				}
+				continue;
 			}
 		}
 	}
