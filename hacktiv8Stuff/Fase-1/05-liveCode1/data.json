@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "nama": "Steve",
+        "tahun_masuk": 2018,
+        "jabatan": "OfficeBoy",
+        "gaji": 9500000,
+        "level": "Staff",
+        "lamaKerja": 2,
+        "perkiraanGaji": 10450000
+    },
+    {
+        "id": 2,
+        "nama": "Martin",
+        "tahun_masuk": 2020,
+        "jabatan": "FrontEnd",
+        "gaji": 12000000,
+        "level": "Staff",
+        "lamaKerja": 0,
+        "perkiraanGaji": 12000000
+    },
+    {
+        "id": 3,
+        "nama": "Tukijo",
+        "tahun_masuk": 2015,
+        "jabatan": "CEO",
+        "gaji": 50000000,
+        "level": "Chief",
+        "lamaKerja": 5,
+        "perkiraanGaji": 65000000
+    },
+    {
+        "id": 4,
+        "nama": "Asep",
+        "tahun_masuk": 2019,
+        "jabatan": "HeadTechnology",
+        "gaji": 20000000,
+        "level": "Manager",
+        "lamaKerja": 1,
+        "perkiraanGaji": 23000000
+    },
+    {
+        "id": 5,
+        "nama": "John",
+        "tahun_masuk": 2014,
+        "jabatan": "CEO",
+        "gaji": 2000000,
+        "level": "Staff",
+        "lamaKerja": 6,
+        "perkiraanGaji": 2200000
+    },
+    {
+        "id": 7,
+        "nama": "John",
+        "tahun_masuk": 2014,
+        "jabatan": "CEO",
+        "gaji": 2000000,
+        "level": "Chief",
+        "lamaKerja": 6,
+        "perkiraanGaji": 2600000
+    },
+    {
+        "id": 8,
+        "nama": "Marco",
+        "tahun_masuk": 2014,
+        "jabatan": "CTO",
+        "gaji": 24000000,
+        "level": "Chief",
+        "lamaKerja": 6,
+        "perkiraanGaji": 31200000
+    }
+]

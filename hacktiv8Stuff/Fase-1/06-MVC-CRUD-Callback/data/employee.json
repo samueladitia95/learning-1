@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "name": "Harry Farley",
+        "position": "doctor",
+        "username": "farleyDoc",
+        "password": "easypassword",
+        "isLogin": false,
+        "patients": []
+    },
+    {
+        "id": 2,
+        "name": "John Smith",
+        "position": "doctor",
+        "username": "coolDoctor",
+        "password": "justwhatever",
+        "isLogin": true,
+        "patients": [
+            {
+                "id": 1,
+                "name": "Joko",
+                "diagnosis": [
+                    "demam",
+                    "muntah",
+                    "pusing"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Marni",
+                "diagnosis": [
+                    "lemah"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Rani",
+                "diagnosis": [
+                    "patah tulang",
+                    "berdarah"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Maria Kane",
+        "position": "nurse",
+        "username": "coolnurse",
+        "password": "godknowswhat",
+        "isLogin": false
+    }
+]
