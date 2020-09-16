@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Students Data</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css" />
+	</head>
+	<body>
+		<h1 class="title">Students Data</h1>
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Gender</th>
+				<th>Birth Date</th>
+				<th>Options</th>
+			</tr>
+
+			<% students.forEach((student) => { %>
+			<tr>
+				<td><%= student.id %></td>
+				<td><%= student.first_name %></td>
+				<td><%= student.last_name %></td>
+				<td><%= student.email %></td>
+				<td><%= student.gender %></td>
+				<td>
+					<%= student.birth_date.toLocaleDateString("nl", {year:"numeric",
+					month:"2-digit", day:"2-digit"}) %>
+				</td>
+				<td>
+					<a href="/students/<%= student.id %>/edit">Edit</a> |
+					<a href="/students/<%= student.id %>/delete">Delete</a>
+				</td>
+			</tr>
+			<% }); %>
+		</table>
+		<h2><a href="/students/add">Add Student</a></h2>
+		<br />
+		<%- include("partials/nav") %>
+	</body>
+</html>

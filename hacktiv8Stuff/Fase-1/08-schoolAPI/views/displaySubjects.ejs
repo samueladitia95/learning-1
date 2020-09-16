@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Subjects Data</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css" />
+	</head>
+	<body>
+		<h1 class="title">Subjects Data</h1>
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>Subject Name</th>
+			</tr>
+
+			<% subjects.forEach((subject) => { %>
+			<tr>
+				<td><%= subject.id %></td>
+				<td><%= subject.subject_name %></td>
+			</tr>
+			<% }); %>
+		</table>
+		<br />
+		<%- include("partials/nav") %>
+	</body>
+</html>
