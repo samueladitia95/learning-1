@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: "Noto Sans JP", sans-serif;
+	background-color: #235789;
+	color: #fdfffc;
+	text-align: center;
+}
+
+.titleDiv {
+	width: 100%;
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+.titleDiv p {
+	margin-top: 15px;
+}
+
+.tableDiv {
+	width: 100%;
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+.tableDiv table {
+	border-collapse: collapse;
+	width: 80%;
+	margin: 10px auto;
+}
+
+.tableDiv table,
+th,
+td {
+	border: 1px solid #fca311;
+}
+
+.tableDiv table tr th {
+	height: 50px;
+}
+
+.tableDiv table tr td {
+	height: 35px;
+}
+
+#subjectsTable table {
+	width: 20%;
+}
+
+.formDiv {
+	width: 90%;
+	padding: 10px;
+	margin: auto;
+	border: 4px solid #fca311;
+	margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 60%;
+	padding: 8px 4px;
+	margin: 10px 0px;
+	box-sizing: border-box;
+}
+
+label {
+	font-weight: 600;
+}
+
+button {
+	width: 70px;
+	height: 40px;
+	background-color: #fca311;
+	color: black	
+}

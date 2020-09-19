@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Teachers Data</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css">
+	</head>
+	<body>
+		<div class="titleDiv">
+			<h1>Teachers Data</h1>
+		</div>
+
+		<div class="tableDiv">
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Gender</th>
+				</tr>
+
+				<% teachers.forEach((element) => { %>
+				<tr>
+					<td><%= element.id %></td>
+					<td><%= element.firstName %></td>
+					<td><%= element.lastName %></td>
+					<td><%= element.email %></td>
+					<td><%= element.gender %></td>
+				</tr>
+				<% }) %>
+			</table>
+		</div>
+
+		<div>
+			<%- include("partials/footer") %>
+		</div>
+	</body>
+</html>

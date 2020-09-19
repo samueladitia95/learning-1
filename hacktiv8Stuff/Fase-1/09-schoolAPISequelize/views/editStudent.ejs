@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit Student</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css">
+	</head>
+	<body>
+		<div class="titleDiv">
+			<h1>Edit Student</h1>
+		</div>
+
+		<div>
+			<% err.forEach((element) => { %>
+				<p><%= element %></p>
+			<% }) %>
+		</div>
+
+		<div class="formDiv">
+			<form action="/students/<%= student.id %>/edit" method="post">
+				<div>
+					<label for="firstName">First Name</label>
+					<br>
+					<input type="text" name="firstName" value="<%= student.firstName %>"/>
+				</div>
+
+				<div>
+					<label for="lastName">Last Name</label>
+					<br>
+					<input type="text" name="lastName" value="<%= student.lastName %>"/>
+				</div>
+
+				<div>
+					<label for="email">Email</label>
+					<br>
+					<input type="email" name="email" value="<%= student.email %>"/>
+				</div>
+
+				<div>
+					<p>Gender</p>
+					<div>
+						<input type="radio" name="gender" id="male" value="male" <%= (student.gender === "male") ? "checked" : "" %>/>
+						<label for="male">Male</label>
+					</div>
+					<div>
+						<input type="radio" name="gender" id="female" value="female" <%= (student.gender === "female") ? "checked" : "" %>/>
+						<label for="female">Female</label>
+					</div>
+				</div>
+				<br>
+
+				<div>
+					<label for="birthDate">Birth Date</label>
+					<br>
+					<input type="date" name="birthDate" value="<%= student.birthDate %>"/>
+				</div>
+				<br>
+				<div>
+					<button type="submit">Save</button>
+				</div>
+			</form>
+		</div>
+		<div>
+			<a href="/students">Back to Students Data</a>
+		</div>
+	</body>
+</html>

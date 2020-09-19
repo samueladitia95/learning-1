@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Add Student</title>
+		<link rel="stylesheet" href="/assets/style.css" type="text/css">
+	</head>
+	<body>
+		<div class="titleDiv">
+			<h1>Add Student</h1>
+		</div>
+
+		<div>
+			<% err.forEach((element) => { %>
+			<p><%= element %></p>
+			<% }) %>
+		</div>
+
+		<div class="formDiv">
+			<form action="/students/add" method="post">
+				<div>
+					<label for="firstName">First Name</label>
+					<br>
+					<input type="text" name="firstName" />
+				</div>
+
+				<div>
+					<label for="lastName">Last Name</label>
+					<br>
+					<input type="text" name="lastName" />
+				</div>
+
+				<div>
+					<label for="email">Email</label>
+					<br>
+					<input type="email" name="email" />
+				</div>
+
+				<div>
+					<p>Gender</p>
+					<div>
+						<input type="radio" name="gender" id="male" value="male" />
+						<label for="male">Male</label>
+					</div>
+					<div>
+						<input type="radio" name="gender" id="female" value="female" />
+						<label for="female">Female</label>
+					</div>
+				</div>
+				<br>
+
+				<div>
+					<label for="birthDate">Birth Date</label>
+					<input type="date" name="birthDate" />
+				</div>
+				<br>
+				<div>
+					<button type="submit">Save</button>
+				</div>
+			</form>
+		</div>
+
+		<div>
+			<a href="/students">Back to Students Data</a>
+		</div>
+		
+		<div>
+			<%- include("partials/footer") %>
+		</div>
+	</body>
+</html>
