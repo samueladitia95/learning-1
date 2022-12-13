@@ -18,7 +18,7 @@
   "homepage": "https://github.com/pi-47-united-fox/school-application-refactor#readme",
   "dependencies": {
     "ejs": "^3.1.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "pg": "^8.3.3"
   }
 }
